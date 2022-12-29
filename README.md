@@ -18,7 +18,7 @@ docker run \
     -v /app/node_modules \
     -p 7775:3000 \
     -e CHOKIDAR_USEPOLLING=true \
-    sample:dev
+    bozynski_alina_coding_assignment11:dev
 
 # Option 3
 Or, from scratch, ensure create-react-app is available:
@@ -48,7 +48,7 @@ docker run \
     -v /app/node_modules \
     -p 7775:3000 \
     -e CHOKIDAR_USEPOLLING=true \
-    sample:dev
+    bozynski_alina_coding_assignment11:dev
 
 # Original README.md file belowS
 # Getting Started with Create React App
