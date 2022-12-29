@@ -50,7 +50,7 @@ docker run \
     -e CHOKIDAR_USEPOLLING=true \
     bozynski_alina_coding_assignment11:dev
 
-# Original README.md file belowS
+# Original README.md file below
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
