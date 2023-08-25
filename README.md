@@ -1,6 +1,10 @@
 # Coding 1
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Requirements
+* Node.js
+* npm
+
 ## Notes on the Docker run command options used
 * --name: assigns a name to the container
 * it: tells Docker to allocate a pseudo-TTY connected to the container's STDIN , which creates an interactive bash shell in the container
