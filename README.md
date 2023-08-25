@@ -1,10 +1,14 @@
-# Option 1
+# Coding 1
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# Run this application
+## Option 1
 To run this application on localhost:7775, run:
 docker pull abozynski/bozynski_alina_coding_assignment11
 then:
 docker run -p 7775:3000 abozynski/bozynski_alina_coding_assignment11
 
-# Option 2
+## Option 2
 Alternatively, fork the GitHub repository of this application (attached in assignment).
 Create the docker image with the docker build command as below:
 docker build -t bozynski_alina_coding_assignment11:dev .
@@ -20,7 +24,7 @@ docker run \
     -e CHOKIDAR_USEPOLLING=true \
     bozynski_alina_coding_assignment11:dev
 
-# Option 3
+## Option 3
 Or, from scratch, ensure create-react-app is available:
 npm install -g create-react-app@3.4.1
 
@@ -50,12 +54,7 @@ docker run \
     -e CHOKIDAR_USEPOLLING=true \
     bozynski_alina_coding_assignment11:dev
 
-# Original README.md file below
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+## Option 4: Getting Started with Create React App
 
 In the project directory, you can run:
 
