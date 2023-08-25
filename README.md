@@ -100,6 +100,8 @@ Dockerfile.prod
 
 Change the app.js file so that it displays 'Coding 1' instead of the default.
 
+Download Docker [here](https://www.docker.com/) and start it up to ensure the Docker daemon is running.
+
 Create the docker image with the docker build command as below:
 ```
 docker build -t bozynski_alina_coding_assignment11:dev .
