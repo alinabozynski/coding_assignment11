@@ -1,62 +1,47 @@
 # Coding 1
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Notes on the Docker run command options used
+* --name: assigns a name to the container
+* it: tells Docker to allocate a pseudo-TTY connected to the container's STDIN , which creates an interactive bash shell in the container
+* --rm: automatically removes the container once it exits
+* -v: bind mounts a volume - mounts a specific directory into the container at a specific path
+* -p: publishes a container's port(s) to the host
+* -e: sets environment variables - CHOKIDAR_USEPOLLING, when set to true, makes the watcher run in polling mode (necessary inside a VM, and mainly used in development when `npm start` isn't detecting changes)
+
 # Run this application
 ## Option 1
-To run this application on localhost:7775, run:
-docker pull abozynski/bozynski_alina_coding_assignment11
-then:
-docker run -p 7775:3000 abozynski/bozynski_alina_coding_assignment11
+Download Docker [here](https://www.docker.com/) and start it up to ensure the Docker daemon is running.
+
+In your command line, run `docker pull abozynski/bozynski_alina_coding_assignment11`
+Run `docker run -p 7775:3000 abozynski/bozynski_alina_coding_assignment11`.
+
+This will be running on the exposed port, 7775.
 
 ## Option 2
-Alternatively, fork the GitHub repository of this application (attached in assignment).
-Create the docker image with the docker build command as below:
+Download Docker [here](https://www.docker.com/) and start it up to ensure the Docker daemon is running.
+
+Clone this repository.
+
+Create the docker image with the following docker build command.
+```
 docker build -t bozynski_alina_coding_assignment11:dev .
+```
 
 Then, run the image to build the container and run the application:
-docker run \
-    --name bozynski_alina_coding_assignment11
-    -it \
-    --rm \
-    -v `pwd`:/app \
-    -v /app/node_modules \
-    -p 7775:3000 \
-    -e CHOKIDAR_USEPOLLING=true \
-    bozynski_alina_coding_assignment11:dev
+```
+docker run --name bozynski_alina_coding_assignment11 -it --rm -v `pwd`:/app -v /app/node_modules -p 7775:3000 -e CHOKIDAR_USEPOLLING=true bozynski_alina_coding_assignment11:dev
+```
 
-## Option 3
-Or, from scratch, ensure create-react-app is available:
-npm install -g create-react-app@3.4.1
+This will be running on the exposed port, 7775.
 
-Generate a new app:
-npm init react-app sample --use-npm
+## Option 3: Getting Started with Create React App
 
-Add a Dockerfile with the contents of the attached Dockerfile.
-Add a .dockerignore file with the following contents:
-node_modules
-build
-.dockerignore
-Dockerfile
-Dockerfile.prod
+Clone this repository, then in the project directory, to install all packages, run:
 
-Change the app.js file so that it displays 'Coding 1' instead of the default.
-Create the docker image with the docker build command as below:
-docker build -t bozynski_alina_coding_assignment11:dev .
+### `npm install`
 
-Then, run the image to build the container and run the application:
-docker run \
-    --name bozynski_alina_coding_assignment11
-    -it \
-    --rm \
-    -v `pwd`:/app \
-    -v /app/node_modules \
-    -p 7775:3000 \
-    -e CHOKIDAR_USEPOLLING=true \
-    bozynski_alina_coding_assignment11:dev
-
-## Option 4: Getting Started with Create React App
-
-In the project directory, you can run:
+Then:
 
 ### `npm start`
 
@@ -90,6 +75,40 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Recreate this application 
+Ensure create-react-app is available with:
+```
+npm install -g create-react-app@3.4.1
+```
+
+Run the following to generate a new app:
+```
+npm init react-app sample --use-npm
+```
+
+Add a Dockerfile with the contents of the Dockerfile in this repository.
+
+Add a .dockerignore file with the following contents:
+```
+node_modules
+build
+.dockerignore
+Dockerfile
+Dockerfile.prod
+```
+
+Change the app.js file so that it displays 'Coding 1' instead of the default.
+
+Create the docker image with the docker build command as below:
+```
+docker build -t bozynski_alina_coding_assignment11:dev .
+```
+
+Then, run the image to build the container and run the application:
+```
+docker run --name bozynski_alina_coding_assignment11 -it --rm -v `pwd`:/app -v /app/node_modules -p 7775:3000 -e CHOKIDAR_USEPOLLING=true bozynski_alina_coding_assignment11:dev
+```
 
 ## Learn More
 
