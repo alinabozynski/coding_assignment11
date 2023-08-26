@@ -17,7 +17,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Option 1
 Download Docker [here](https://www.docker.com/) and start it up to ensure the Docker daemon is running.
 
-In your command line, run `docker pull abozynski/bozynski_alina_coding_assignment11`
+In your command line, run `docker pull abozynski/bozynski_alina_coding_assignment11`\
 Run `docker run -p 7775:3000 abozynski/bozynski_alina_coding_assignment11`.
 
 This will be running on the exposed port, 7775.
